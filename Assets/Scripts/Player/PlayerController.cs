@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions playerInputActions;
     private Vector3 input;
     public CharacterController characterController;
+    public InputAction Click;
 
     /* Put the next 4 functions in a Game Manager script later*/
 
@@ -73,10 +75,12 @@ public class PlayerController : MonoBehaviour
     {
         if (input == Vector3.zero && currentSpeed > 0)
         {
+            //slowing down
             currentSpeed -= decceleration * Time.deltaTime;
         }
         else if (input != Vector3.zero && currentSpeed < maxSpeed)
         {
+            //speeding up
             currentSpeed += acceleration * Time.deltaTime;
         }
 
