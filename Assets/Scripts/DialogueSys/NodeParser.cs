@@ -1,12 +1,14 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using TreeEditor;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using XNode;
-using TMPro;
-using UnityEngine.InputSystem;
 
 
 public class NodeParser : MonoBehaviour
@@ -18,8 +20,16 @@ public class NodeParser : MonoBehaviour
     public TMP_Text dialogue;
     public Image speakerImage;
 
+    public InputManager inputManager;
+
+    //wait until mouseclick to continue coroutine
+    //private bool isInteracted;
+
+
     private void Start()
     {
+      //isInteracted = false;
+
       foreach (BaseNode b in graph.nodes)
         {
             if (b.GetString() == "Start")
@@ -31,7 +41,15 @@ public class NodeParser : MonoBehaviour
         }
         _parser = StartCoroutine(ParseNode());
     }
-    
+
+    private void Update()
+    {
+        if (inputManager.InteractAction.IsPressed())
+        {
+            //isInteracted = true;
+        }
+    }
+
     IEnumerator ParseNode()
     {
         BaseNode b = graph.current;
@@ -47,12 +65,25 @@ public class NodeParser : MonoBehaviour
         //check that first index in the string array equals DialogueNode
         if (dataParts[0] == "DialogueNode")
         {
+            yield return new WaitForSeconds(0.4f);
+
             //Run dialogue processing
             speaker.text = dataParts[1];
             dialogue.text = dataParts[2];
             speakerImage.sprite = b.GetSprite();
-            yield return null;
+
+            //wait until mouse click to continue to next node
+            Debug.Log("waiting for mouse click...");
+            yield return new WaitUntil(() => inputManager.InteractAction.IsPressed());
             
+            //continue to next node
+            //isInteracted = false;
+            Debug.Log("Click!");
+            NextNode("exit"); 
+        }
+        if (dataParts[0] == "End")
+        {
+            CloseDialogue();
         }
     }
 
@@ -76,9 +107,8 @@ public class NodeParser : MonoBehaviour
         _parser = StartCoroutine(ParseNode());
     }
 
-    //next node doesnt read until the player clicks
-    private void OnMouseDown()
+    private void CloseDialogue()
     {
-        NextNode("exit");
+        Debug.Log("close dialogue");
     }
 }

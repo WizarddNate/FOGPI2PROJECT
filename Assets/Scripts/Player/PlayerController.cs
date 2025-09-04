@@ -1,9 +1,11 @@
 using Unity.Cinemachine;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //character movement 
     [Header("Speed and Acceleration")]
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float rotationSpeed = 360f;
@@ -18,14 +20,12 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions playerInputActions;
     private Vector3 input;
     public CharacterController characterController;
-    public InputAction Click;
-
-    /* Put the next 4 functions in a Game Manager script later*/
-
+    
     private void Awake()
     {
         playerInputActions = new InputSystem_Actions();
         characterController = GetComponent<CharacterController>();
+
     }
 
     private void OnEnable()
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
+        //make sure the player is grounded
         isGrounded = characterController.isGrounded;
 
         if (isGrounded && velocity.y < 0)
@@ -52,15 +54,11 @@ public class PlayerController : MonoBehaviour
             velocity.y = gravity * Time.deltaTime;
         }
 
+        //look at all that movement
         MoveInput();
-
         Look();
         CalculateSpeed();
         Movement();
-    }
-    private void FixedUpdate()
-    {
-
     }
 
     private void MoveInput()
