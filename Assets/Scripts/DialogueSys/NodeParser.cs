@@ -13,24 +13,30 @@ using XNode;
 
 public class NodeParser : MonoBehaviour
 {
+    [Header("Dialogue Graph")]
     public DialogueGraph graph;
     Coroutine _parser;
 
+    [Header("UI Elements")]
+    public GameObject dialogueContainer;
     public TMP_Text speaker;
     public TMP_Text dialogue;
     public Image speakerImage;
 
     public InputManager inputManager;
+    public PlayerController playerController;
 
-    //wait until mouseclick to continue coroutine
-    //private bool isInteracted;
-
-
-    private void Start()
+    public void StartDialogue()
     {
-      //isInteracted = false;
+        //open dialogue UI 
+        Debug.Log("open dialogue");
+        dialogueContainer.gameObject.SetActive(true);
 
-      foreach (BaseNode b in graph.nodes)
+        //Stop player from walking away!
+        playerController.enabled = false;
+
+        //start cycling through nodes in graph
+        foreach (BaseNode b in graph.nodes)
         {
             if (b.GetString() == "Start")
             {
@@ -40,14 +46,6 @@ public class NodeParser : MonoBehaviour
             }
         }
         _parser = StartCoroutine(ParseNode());
-    }
-
-    private void Update()
-    {
-        if (inputManager.InteractAction.IsPressed())
-        {
-            //isInteracted = true;
-        }
     }
 
     IEnumerator ParseNode()
@@ -65,7 +63,8 @@ public class NodeParser : MonoBehaviour
         //check that first index in the string array equals DialogueNode
         if (dataParts[0] == "DialogueNode")
         {
-            yield return new WaitForSeconds(0.4f);
+            //wait a split second before continuing. Prevents skipping through multiple nodes at once.
+            yield return new WaitForSeconds(0.5f);
 
             //Run dialogue processing
             speaker.text = dataParts[1];
@@ -110,5 +109,9 @@ public class NodeParser : MonoBehaviour
     private void CloseDialogue()
     {
         Debug.Log("close dialogue");
+        dialogueContainer.gameObject.SetActive(false);
+
+        //Let player go home
+        playerController.enabled = true;
     }
 }

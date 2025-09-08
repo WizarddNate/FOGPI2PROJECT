@@ -60,7 +60,10 @@ public class PlayerController : MonoBehaviour
         CalculateSpeed();
         Movement();
     }
+    
 
+
+    //Movement
     private void MoveInput()
     {
         Vector2 Input = playerInputActions.Player.Move.ReadValue<Vector2>();
@@ -95,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
         Quaternion rotation = Quaternion.LookRotation(multipliedMatrix, Vector3.up);
 
-        //This makes the player rotate in a half circle which i think is kinda ugly. Change to snap rotation?
+        //This makes the player rotate in a half circle when you turn around
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 

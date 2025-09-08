@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: Assembly-CSharp::StartNode
   graph: {fileID: 11400000}
-  position: {x: -296, y: -168}
+  position: {x: -344, y: -104}
   ports:
     keys:
     - exit
@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 7922052697341950916}
   - {fileID: 1514588390914474433}
   - {fileID: 752201232105678424}
+  - {fileID: 4401077548862858972}
   current: {fileID: 752201232105678424}
 --- !u!114 &752201232105678424
 MonoBehaviour:
@@ -63,7 +64,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: 728, y: -88}
+  position: {x: 600, y: -120}
   ports:
     keys:
     - entry
@@ -85,7 +86,10 @@ MonoBehaviour:
       _node: {fileID: 752201232105678424}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: 4401077548862858972}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -95,6 +99,7 @@ MonoBehaviour:
   speakerName: Dave
   dialogueLine: ILL STRANGLE YOU YOU EVIL SHARK BITCH!!!
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueOptions: 0
 --- !u!114 &1514588390914474433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +113,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: 472, y: -136}
+  position: {x: 360, y: -120}
   ports:
     keys:
     - entry
@@ -143,6 +148,7 @@ MonoBehaviour:
   speakerName: Shark Harvey
   dialogueLine: Yawn... You are so boring
   sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueOptions: 0
 --- !u!114 &4245188723734946041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +162,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: -40, y: -200}
+  position: {x: -104, y: -120}
   ports:
     keys:
     - entry
@@ -191,6 +197,38 @@ MonoBehaviour:
   speakerName: Dave
   dialogueLine: woah woah woah woah woah man hold on
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueOptions: 0
+--- !u!114 &4401077548862858972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1965460336c4b564aa00b0506740b26a, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: Assembly-CSharp::EndNode
+  graph: {fileID: 11400000}
+  position: {x: 840, y: -120}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 4401077548862858972}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 752201232105678424}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
 --- !u!114 &7922052697341950916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +242,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: 216, y: -104}
+  position: {x: 136, y: -120}
   ports:
     keys:
     - entry
@@ -239,3 +277,4 @@ MonoBehaviour:
   speakerName: Dave
   dialogueLine: WHATS GOING ON IM SCARED
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueOptions: 0

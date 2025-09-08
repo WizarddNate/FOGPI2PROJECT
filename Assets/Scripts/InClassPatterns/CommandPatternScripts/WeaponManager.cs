@@ -52,6 +52,7 @@ public class WeaponManager : MonoBehaviour
         if (weaponIndex < 0)
             weaponIndex = weapons.Count - 1;
         currentWeapon = weapons[weaponIndex];
+        currentWeapon.equipped.Invoke();
     }
 
     public void NextWeapon()

@@ -15,6 +15,8 @@ public class DialogueNode : BaseNode
 	public string dialogueLine;
 	public Sprite sprite;
 
+	public bool dialogueOptions = false;
+
 	public override string GetString()
 	{
 		return "DialogueNode/" + speakerName + "/" + dialogueLine;
@@ -24,5 +26,10 @@ public class DialogueNode : BaseNode
     {
         return sprite;
     }
+}
+
+[System.Serializable]
+public class DialogueOption
+{
 
 }
