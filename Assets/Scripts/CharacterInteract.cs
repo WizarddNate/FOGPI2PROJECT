@@ -19,4 +19,28 @@ public class CharacterInteract : MonoBehaviour
             hasInteracted = true;
         }
     }
+/*
+public NodeParser NodeParser;
+    public bool hasSpoken;
+
+    public bool CanInteract()
+{
+    return true;
 }
+
+public bool Interact(Interactor _interactor)
+{
+    if (hasSpoken)
+    {
+        return false;
+    }
+    else
+    {
+        NodeParser.StartDialogue();
+        return true;
+    }
+}
+*/
+}
+
+

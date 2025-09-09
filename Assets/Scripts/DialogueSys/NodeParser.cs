@@ -64,7 +64,7 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "DialogueNode")
         {
             //wait a split second before continuing. Prevents skipping through multiple nodes at once.
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
 
             //Run dialogue processing
             speaker.text = dataParts[1];

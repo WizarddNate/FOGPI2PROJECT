@@ -15,7 +15,7 @@ public class DialogueNode : BaseNode
 	public string dialogueLine;
 	public Sprite sprite;
 
-	public bool dialogueOptions = false;
+	//public bool dialogueOptions = false;
 
 	public override string GetString()
 	{
