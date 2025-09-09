@@ -4,31 +4,43 @@ using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
+    [Tooltip("The distance of the raycast")]
     [SerializeField]
     private float castDistance = 5f;
 
+    [Tooltip("The raycasts offset from the player")]
     [SerializeField]
-    private Vector3 raycastOffset = new Vector3(0, 1f, 0);
+    private Vector3 raycastOffset = new Vector3(0.5f, 0.5f, 0);
+
+    public GameObject interactDisplay;
 
     InputAction interactAction;
 
     private void Start()
     {
         interactAction = InputSystem.actions.FindAction("Interact");
+        interactDisplay.SetActive(false);
     }
 
     private void Update()
     {
-        if (interactAction.WasPressedThisFrame())
+        if (InteractionTest(out IInteractable interactable))
         {
-            if (InteractionTest(out IInteractable interactable))
+            if (interactable.CanInteract())
             {
-                if (interactable.CanInteract())
+                //overhead ui shows when a player can interact with something
+                interactDisplay.SetActive(true);
+
+                if (interactAction.WasPressedThisFrame())
                 {
-                    //set up popup that tells player interaction is possible
                     interactable.Interact(this);
                 }
             }
+        }
+        else
+        {
+            //the overhead ui is hidden when not able to interact with an object
+            interactDisplay.SetActive(false);
         }
     }
 
