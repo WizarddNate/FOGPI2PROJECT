@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   castDistance: 15
   raycastOffset: {x: 0.5, y: 0.5, z: 0}
+  interactDisplay: {fileID: 9179223673416001028}
 --- !u!114 &3413927155608583148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,13 +405,14 @@ GameObject:
   - component: {fileID: 7046581271350056815}
   - component: {fileID: 5687307564428125070}
   - component: {fileID: 5781367665652562117}
+  - component: {fileID: 8760165943728810541}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: OverheadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8460434114753163953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -494,3 +496,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8760165943728810541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179223673416001028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fceb0ff73096d3b48b6ee9e60f95c583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BillboardUI

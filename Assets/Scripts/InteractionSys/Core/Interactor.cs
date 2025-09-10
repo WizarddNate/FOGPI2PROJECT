@@ -34,6 +34,8 @@ public class Interactor : MonoBehaviour
                 if (interactAction.WasPressedThisFrame())
                 {
                     interactable.Interact(this);
+
+                    interactDisplay.SetActive(false);
                 }
             }
         }
@@ -44,6 +46,7 @@ public class Interactor : MonoBehaviour
         }
     }
 
+    //determines if you are able to interact with an object by sending out a raycast
     private bool InteractionTest(out IInteractable _interactable)
     {
         _interactable = null;
