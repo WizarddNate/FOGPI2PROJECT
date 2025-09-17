@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: 632, y: -136}
+  position: {x: 488, y: -168}
   ports:
     keys:
     - entry
@@ -37,6 +37,105 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
+        node: {fileID: -3712902333089895801}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: 'Ha, don''t you remember? The king stripped you of that title! '
+--- !u!114 &-9100542366408053550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b725aaed9f023746915d4dc67f6c177, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  graph: {fileID: 11400000}
+  position: {x: 488, y: 360}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -9100542366408053550}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 2592875495008399695}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -9100542366408053550}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -1317695763101637832}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: What? You don't wanna talk to me?
+--- !u!114 &-3712902333089895801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b725aaed9f023746915d4dc67f6c177, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  graph: {fileID: 11400000}
+  position: {x: 888, y: 8}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -3712902333089895801}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: -9118868754298305981}
+        reroutePoints: []
+      - fieldName: exit
+        node: {fileID: 3782617401908427710}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -3712902333089895801}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
         node: {fileID: 4401077548862858972}
         reroutePoints: []
       _direction: 1
@@ -45,9 +144,9 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  speakerName: Cool Skeleton
-  dialogueLine: Ha, good luck! You'll need a key first.
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: You're nothing but a prisoner of the Labyrinth now...
 --- !u!114 &-2878011272601730023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +178,54 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   exit: 0
+--- !u!114 &-1317695763101637832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b725aaed9f023746915d4dc67f6c177, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  graph: {fileID: 11400000}
+  position: {x: 888, y: 360}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1317695763101637832}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: -9100542366408053550}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1317695763101637832}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 4401077548862858972}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: Maybe the quiet of the Labyrinth will suit you.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0798b7c918a409e40bb4e4f0e62b0f97, type: 3}
-  m_Name: TestGraph
+  m_Name: DungeonGuard
   m_EditorClassIdentifier: Assembly-CSharp::DialogueGraph
   nodes:
   - {fileID: -2878011272601730023}
@@ -97,6 +244,9 @@ MonoBehaviour:
   - {fileID: 2592875495008399695}
   - {fileID: -9118868754298305981}
   - {fileID: 3782617401908427710}
+  - {fileID: -9100542366408053550}
+  - {fileID: -3712902333089895801}
+  - {fileID: -1317695763101637832}
   current: {fileID: 2592875495008399695}
 --- !u!114 &2592875495008399695
 MonoBehaviour:
@@ -118,6 +268,7 @@ MonoBehaviour:
     - answers
     - answers 0
     - answers 1
+    - answers 2
     values:
     - _fieldName: entry
       _node: {fileID: 2592875495008399695}
@@ -165,13 +316,27 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 2592875495008399695}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -9100542366408053550}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   entry: 0
   answers:
-  - I'm not trapped! I'm gonna break free!
-  - Hey, back off, you don't know anything about me!
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  speakerName: Cool Skeleton
-  dialogueLine: So you're trapped in this jail cell too huh?
+  - Don't address me that way, I'm part of the king's royal guard!
+  - Please, you have to understand, I don't belong here!
+  - ...
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: Lookie here! It seems like we have a new prisoner today. You're wearing
+    some awfully shiny armor too.
 --- !u!114 &3782617401908427710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +350,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   graph: {fileID: 11400000}
-  position: {x: 632, y: 136}
+  position: {x: 488, y: 88}
   ports:
     keys:
     - entry
@@ -209,7 +374,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: 4401077548862858972}
+        node: {fileID: -3712902333089895801}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -217,9 +382,10 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  speakerName: Cool Skeleton
-  dialogueLine: Woah, no need to get nasty. How about you leave me alone.
+  sprite: {fileID: 21300000, guid: 0aa63ff12a05313419f86ed758bba6b5, type: 3}
+  speakerName: Dungeon Guard
+  dialogueLine: The King's order's says otherwise! Attempted coups are exactly what
+    gets you here.
 --- !u!114 &4401077548862858972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +399,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: Assembly-CSharp::EndNode
   graph: {fileID: 11400000}
-  position: {x: 1160, y: 40}
+  position: {x: 1336, y: 264}
   ports:
     keys:
     - entry
@@ -244,10 +410,10 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: -9118868754298305981}
+        node: {fileID: -3712902333089895801}
         reroutePoints: []
       - fieldName: exit
-        node: {fileID: 3782617401908427710}
+        node: {fileID: -1317695763101637832}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

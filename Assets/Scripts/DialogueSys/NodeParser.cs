@@ -109,9 +109,9 @@ public class NodeParser : MonoBehaviour
         string[] dataParts = data.Split('/');
 
         //reset textbox
-        speaker.text = "";
-        dialogue.text = "";
-        speakerImage.sprite = null;
+        //speaker.text = "";
+        //dialogue.text = "";
+        //speakerImage.sprite = null;
 
         foreach (Transform child in buttonParent) //destroys buttons before going to next node
         { 
