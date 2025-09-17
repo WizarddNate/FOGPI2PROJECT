@@ -6,7 +6,7 @@ public class Interactor : MonoBehaviour
 {
     [Tooltip("The distance of the raycast")]
     [SerializeField]
-    private float castDistance = 5f;
+    public float castDistance = 15f;
 
     [Tooltip("The raycasts offset from the player")]
     [SerializeField]
@@ -53,7 +53,7 @@ public class Interactor : MonoBehaviour
 
         Ray ray = new Ray(transform.position + raycastOffset, transform.forward);
 
-        //shows the size of the array
+        //shows the size of the ray - debug tool
         Debug.DrawRay(ray.origin, ray.direction, Color.green, 3f);
 
         if (Physics.Raycast(ray, out RaycastHit hitInfo, castDistance))
