@@ -1,0 +1,461 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7865961871806909672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 1496, y: 424}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7865961871806909672}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -1504407511777993448}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: -7865961871806909672}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -7865961871806909672}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 6257921911553917542}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - '[End]'
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: And if you can't find a way back out, it's no big deal! It's pretty
+    fun being a sketelon!
+--- !u!114 &-6546897023759749407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 968, y: 424}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: -6546897023759749407}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 3779584292055470710}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: -6546897023759749407}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -6546897023759749407}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -1504407511777993448}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - 'I wouldn''t be the first? '
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: Oh yeah? Well you wouldn't be the first. I wish I could escape, but
+    I have a hard time moving these old legs.
+--- !u!114 &-1504407511777993448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 1240, y: 424}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1504407511777993448}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -6546897023759749407}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: -1504407511777993448}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -1504407511777993448}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -7865961871806909672}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - '[Continue]'
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: Oh yeah, security here like, sucks. I'm sure you could find a loose
+    brick in the wall and just scurry away.
+--- !u!114 &-659147402570478798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 968, y: 72}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: -659147402570478798}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 3779584292055470710}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: -659147402570478798}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -659147402570478798}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - '[Continue]'
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: What? I'm not disgusting, I'm cool! Didn't you read my speaker tag?
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0798b7c918a409e40bb4e4f0e62b0f97, type: 3}
+  m_Name: CoolSkeleton
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGraph
+  nodes:
+  - {fileID: 3476295868928294818}
+  - {fileID: 3779584292055470710}
+  - {fileID: -659147402570478798}
+  - {fileID: -6546897023759749407}
+  - {fileID: -1504407511777993448}
+  - {fileID: -7865961871806909672}
+  - {fileID: 6257921911553917542}
+  - {fileID: 8577364510259052452}
+  current: {fileID: 0}
+--- !u!114 &3476295868928294818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab14b54eb0827674fa08a7c3b6174f04, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: Assembly-CSharp::StartNode
+  graph: {fileID: 11400000}
+  position: {x: 312, y: 120}
+  ports:
+    keys:
+    - exit
+    values:
+    - _fieldName: exit
+      _node: {fileID: 3476295868928294818}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 3779584292055470710}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  exit: 0
+--- !u!114 &3779584292055470710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 584, y: 88}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: entry
+      _node: {fileID: 3779584292055470710}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 3476295868928294818}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: 3779584292055470710}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 3779584292055470710}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -659147402570478798}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 3779584292055470710}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -6546897023759749407}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - Gah, an undead! What a disgusting creature!
+  - I'm not going to be a skeleton, because I'm going to break out!
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: Hey, nice to have a new face around here! Maybe in a few months,
+    we'll have a new sketelon too!
+--- !u!114 &6257921911553917542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1965460336c4b564aa00b0506740b26a, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: Assembly-CSharp::EndNode
+  graph: {fileID: 11400000}
+  position: {x: 1832, y: 280}
+  ports:
+    keys:
+    - entry
+    values:
+    - _fieldName: entry
+      _node: {fileID: 6257921911553917542}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -7865961871806909672}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 8577364510259052452}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+--- !u!114 &8577364510259052452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a3213e17bc0a48a0f620b9b1246e7, type: 3}
+  m_Name: Dialogue Choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoicesNode
+  graph: {fileID: 11400000}
+  position: {x: 1240, y: 72}
+  ports:
+    keys:
+    - entry
+    - answers
+    - answers 0
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8577364510259052452}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers
+      _node: {fileID: 8577364510259052452}
+      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 8577364510259052452}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 6257921911553917542}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  entry: 0
+  answers:
+  - '[End]'
+  sprite: {fileID: 21300000, guid: 6baf01ce4dbd0784191bfcce7ca5c7de, type: 3}
+  speakerName: Cool Skeleton
+  dialogueLine: I hope you'll be more polite as a sketelon.

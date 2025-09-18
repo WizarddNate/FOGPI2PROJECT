@@ -17,6 +17,8 @@ public class DialogueChoicesNode : BaseNode
     //text area determines the gui area size for the text field (max, min)
     [TextArea(3, 10)] public string dialogueLine;
 
+
+
     public override string GetString()
     {
         return "DialogueChoicesNode/" + speakerName + "/" + dialogueLine + "/" + answers[0];

@@ -11,4 +11,6 @@ public class BaseNode : Node {
 	}
 
 	public virtual Sprite GetSprite() { return null; }
+
+    public virtual AudioClip GetVoice() { return null; }
 }
